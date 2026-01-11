@@ -80,6 +80,37 @@
       color: #555;
       font-size: 0.95rem;
     }
+    /* Image grid for project photos */
+.image-row {
+  display: flex;
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.image-row figure {
+  flex: 1;
+  margin: 0;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+.image-row figcaption {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Stack images on small screens */
+@media (max-width: 700px) {
+  .image-row {
+    flex-direction: column;
+  }
+}
+
   </style>
 </head>
 
@@ -117,23 +148,27 @@
     while improving consistency and throughput.
   </p>
 
+<div class="image-row">
+
   <figure>
-    <img src="/assets/horizontal-gantry.jpg"
+    <img src="assets/horizontal-gantry.jpg"
          alt="Horizontal laser welding gantry used in production to automate LFDC welding">
     <figcaption>
       <strong>Horizontal Laser Welding Gantry</strong><br>
-      Production-deployed system designed and built during internship to automate LFDC welding
+      Production-deployed system designed and built during internship
     </figcaption>
   </figure>
 
   <figure>
-    <img src="/assets/inlet-spigot-rig.jpg"
-         alt="Inlet and spigot laser welding rig with custom fixture and automated weld process">
+    <img src="assets/inlet-spigot-rig.jpg"
+         alt="Inlet and spigot laser welding rig with custom automated fixture">
     <figcaption>
-      <strong>Inlet/Spigot Laser Welding Rig</strong><br>
-      Custom fixture and automated weld process now used across high-volume production
+      <strong>Inlet / Spigot Laser Welding Rig</strong><br>
+      Custom fixture and automated weld process for high-volume production
     </figcaption>
   </figure>
+
+</div>
 
   <p>
     Now working full-time as an Automation Technician, I support and enhance production
